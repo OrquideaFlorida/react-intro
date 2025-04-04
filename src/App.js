@@ -1,26 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
-
+import {useState}from'react';
 function App() {
+  const[contador, setContador] = useState(0);
+  function increment(){
+   setContador(contador+1);
+  }
+
+  /*
+  let contador = 0;
+  function Increment(){
+    contador++;
+    console.log(contador);
+  }
+    */
+
   return (
     <div className="App">
-      <Header/>
-      <header className="App-header">
+      <Header tile="Header Param"/>
+      <header className="App-header"/>
+
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          <h1 > "Hello World Hello World  Hello World" </h1>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>{contador}</p> cliques!
+        <button onClick={increment}>Cliques!!!!</button>
     </div>
   );
 }
