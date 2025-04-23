@@ -12,18 +12,19 @@ function App() {
     }
     return(
         <div className="App">
-          <header ClassName="App-header">
+         
             <Header title="Header Param" />
             
             <img src={logo} className="App-logo" alt="logo" />
             
             <p>
             <Link to="cadastro">Acessar cadastro </Link> <br></br>
-            </p><p>
-               <input type="button" value="Clique" onClick={increment} /> 
             </p>
+            <p><br/>
+               <input type="button" value="Clique" onClick={increment} /> 
+            </p><br/>
             <p>{contador}</p> cliques!
-          </header>
+          
         </div>
     );
 }
