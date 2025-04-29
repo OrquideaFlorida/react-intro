@@ -16,7 +16,7 @@ app.post('/cadastro', (req, res, next) => {
     //salva no banco de dados
     cadastros.push({
         nome: req.body.txtNome,
-        idade: parseInt(req.body.txtIdade),
+        idade: parseInt(req.body.txtIdade, req),
         uf: req.body.cmbUF
     });
     res.json({message: "Tudo ok por aqui!", dados: cadastros});
